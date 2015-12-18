@@ -23,6 +23,7 @@ This is the default setup. Expand, swap, and otherwise customize as you see fit:
     - [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)
     - Hot module reloading
     - Style injection
+    - ES6 support via [Babel](https://babeljs.io/)
 - [PostCSS] plugins:
     - [postcss-import](https://github.com/postcss/postcss-import)
     - [postcss-simple-vars](https://github.com/postcss/postcss-simple-vars) *or* [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
