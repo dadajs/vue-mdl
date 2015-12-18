@@ -64,7 +64,7 @@ Styles that are not specific to any component should be defined in [`src/styles`
 Each component has its own directory within [`src/components`](src/components). A component's script, styles, and template are all namespaced and organized within the component's directory.
 
 ### Organized views
-Views are organized similarly to components, isolating view-specific scripts, styles, and templates within their own directories.
+Views are organized similarly to components, isolating view-specific scripts, styles, and templates within their own directories in [`src/views`](src/views).
 
 ## References
 - [Nicholas Gallagher: Thinking beyond "Scalable CSS"](https://www.youtube.com/watch?v=L8w3v9m6G04)
