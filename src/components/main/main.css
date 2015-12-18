@@ -1,0 +1,7 @@
+.Main {
+    padding: 2rem;
+}
+
+.Main * + * {
+    margin-top: 1rem;
+}
