@@ -55,7 +55,9 @@ module.exports = {
     },
     postcss: function() {
         return [
-            postcssImport,
+            postcssImport({
+                path: ['./src/styles/modules'],
+            }),
             postcssCalc,
             postcssCustomMedia,
             postcssMixins,

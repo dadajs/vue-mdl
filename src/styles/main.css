@@ -5,21 +5,8 @@
 @import 'suitcss-base';
 
 /**
- * Configuration
+ * Global styles
  */
 
-@import './config/breakpoints';
-@import './config/colors';
-
-/**
- * Libraries
- */
-
-@import 'suitcss-utils-align';
-@import 'suitcss-utils-display';
-@import 'suitcss-utils-layout';
-@import 'suitcss-utils-offset';
-@import 'suitcss-utils-position';
-@import 'suitcss-utils-size';
-@import 'suitcss-utils-text';
-@import 'suitcss-utils-flex';
+@import 'global/layout';
+@import 'global/type';

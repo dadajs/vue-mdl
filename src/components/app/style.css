@@ -1,0 +1,13 @@
+.App {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.App-header {
+
+}
+
+.App-main {
+    flex-grow: 1;
+}
