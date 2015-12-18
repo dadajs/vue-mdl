@@ -1,4 +1,4 @@
-# Vue-webpack app
+# Vue-webpack
 A component-based Vue and webpack app starter/example.
 
 - [Overview](#overview)
