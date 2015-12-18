@@ -26,7 +26,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel!eslint',
                 exclude: /node_modules/
             },
             {
@@ -40,7 +40,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url',
                 query: {
                     limit: 10000,
