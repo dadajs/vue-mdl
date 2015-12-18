@@ -56,7 +56,13 @@ module.exports = {
     postcss: function() {
         return [
             postcssImport,
-            postcssCustomProperties,
+
+            // Use custom properties that are W3C spec-compliant:
+            // postcssCustomProperties,
+
+            // Use SASS-like variables:
+            postcssSimpleVars,
+
             postcssCalc,
             postcssCustomMedia,
             postcssMixins,
