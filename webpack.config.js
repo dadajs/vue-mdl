@@ -6,6 +6,7 @@ var postcssCustomProperties = require('postcss-custom-properties');
 var postcssCustomMedia = require('postcss-custom-media');
 var postcssImport = require('postcss-import');
 var postcssMixins = require('postcss-mixins');
+var postcssSimpleVars = require('postcss-simple-vars');
 var webpack = require('webpack');
 
 module.exports = {
@@ -52,7 +53,7 @@ module.exports = {
         presets: ['es2015', 'stage-0'],
         plugins: ['transform-runtime']
     },
-    postcss: () => {
+    postcss: function() {
         return [
             postcssImport,
             postcssCustomProperties,
