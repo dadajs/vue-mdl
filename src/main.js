@@ -1,8 +1,8 @@
-import './styles/main.css'
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import routes from './routes'
-import App from './components/app'
+import './styles/main.css';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import routes from './routes';
+import App from './components/app';
 
 // Vue plugins
 Vue.use(VueRouter);
