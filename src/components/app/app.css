@@ -1,0 +1,12 @@
+.App {
+    display: flex;
+    flex-direction: column;    
+}
+
+.App-header {
+    order: 2;
+}
+
+.App-main {
+    order: 1;
+}
