@@ -57,8 +57,19 @@ Customize [webpack.config.js](webpack.config.js) as you need.
 ### Initial setup
 By default, the app entry point is [`src/main.js`](src/main.js). Define routes in [`src/routes.js`](src/routes.js).
 
-### Global styles
-Styles that are not specific to any component should be defined in [`src/styles`](src/styles). Import external dependencies and do your configuration in the top-level manifest: [`src/styles/main.css`](src/styles/main.css).
+### Styles: global and modules
+Configure global styles in [`src/styles/global`](src/styles/global) and import in the [main stylesheet](src/main.css).
+
+Place reusable style modules in [`src/styles/modules`](src/styles/modules), and import them within your component stylesheets:
+
+```css
+/* /components/header/style.css */
+@import 'colors';
+
+.Header {
+    background: $yellow;
+}
+```
 
 ### Organized components
 Each component has its own directory within [`src/components`](src/components). A component's script, styles, and template are all namespaced and organized within the component's directory.
