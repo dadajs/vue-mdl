@@ -47,7 +47,7 @@ $ npm run dev
 $ npm run build
 ``` 
 
-Customize [webpack.config.js] as you need.
+Customize [webpack.config.js](webpack.config.js) as you need.
 
 ## References
 - [Nicholas Gallagher: Thinking beyond "Scalable CSS"](https://www.youtube.com/watch?v=L8w3v9m6G04)
