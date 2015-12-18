@@ -1,21 +1,19 @@
-module.exports = {
+/**
+ * Redirects
+ */
+module.exports.redirect = {};
 
-    redirect: {
+/**
+ * Routes
+ */
+module.exports.map = {
 
+    '*': {
+        component: require('views/404')
     },
-    
-    map: {
-        '*': {
-            component: {
-                tempate: '404'
-            }
-        },
 
-        '/': {
-            component: {
-                template: 'home',
-            }
-        }
-    },
+    '/': {
+        component: require('views/welcome')
+    }
 
 };

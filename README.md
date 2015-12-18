@@ -63,6 +63,9 @@ Styles that are not specific to any component should be defined in [`src/styles`
 ### Organized components
 Each component has its own directory within [`src/components`](src/components). A component's script, styles, and template are all namespaced and organized within the component's directory.
 
+### Organized views
+Views are organized similarly to components, isolating view-specific scripts, styles, and templates within their own directories.
+
 ## References
 - [Nicholas Gallagher: Thinking beyond "Scalable CSS"](https://www.youtube.com/watch?v=L8w3v9m6G04)
 - [Simon Smith: Using webpack to build React components and their assets](http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/)
