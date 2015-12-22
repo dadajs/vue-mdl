@@ -8,5 +8,5 @@
  * Global styles
  */
 
-@import 'global/layout';
-@import 'global/type';
+@import 'layout';
+@import 'type';

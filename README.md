@@ -57,27 +57,30 @@ Customize [webpack.config.js](webpack.config.js) as you need.
 ### Initial setup
 By default, the app entry point is [`src/main.js`](src/main.js). Define routes in [`src/routes.js`](src/routes.js).
 
-### Styles: global and modules
-Configure global styles in [`src/styles/global`](src/styles/global) and import in the [main stylesheet](src/main.css).
+### Organized modules
+Each module (view/component) has its own directory within [`src/views`](src/views) or [`src/components`](src/components). A module's scripts, styles, and template are all namespaced and organized within their respective directory.
 
-Place reusable style modules in [`src/styles/modules`](src/styles/modules), and import them within your component stylesheets:
+### Style dependencies
+Style dependencies must be resolved at the module level. First, import a stylesheet directly in your module's javascript file:
 
-```css
-/* /components/header/style.css */
-@import 'colors';
+```js
+import './style.css';
 
-.Header {
-    background: $yellow;
-}
+module.exports = {
+    //...
+};
 ```
 
-### Organized components
-Each component has its own directory within [`src/components`](src/components). A component's script, styles, and template are all namespaced and organized within the component's directory.
+Declare style dependencies in the stylesheet:
+```css
+/* Import the colors config file */
+@import 'colors';
+```
 
-### Organized views
-Views are organized similarly to components, isolating view-specific scripts, styles, and templates within their own directories in [`src/views`](src/views).
+**Important**: because config stylesheets are imported every time they are called by a dependency, you should avoid writing any selector styles in them. Instead, declare reusable variables in config stylesheets.
 
 ## References
 - [Nicholas Gallagher: Thinking beyond "Scalable CSS"](https://www.youtube.com/watch?v=L8w3v9m6G04)
 - [Simon Smith: Using webpack to build React components and their assets](http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/)
 - [VueJS: Building Larger Apps–Modularization](http://vuejs.org/guide/application.html#Modularization)
+

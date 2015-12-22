@@ -1,7 +1,8 @@
-import './styles/main.css'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './routes'
+
+import './styles/main.css'
 import App from './components/app'
 
 // Vue plugins

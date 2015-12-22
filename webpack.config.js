@@ -1,5 +1,6 @@
 var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 var pixrem = require('pixrem');
 var postcssCalc = require('postcss-calc');
 var postcssCustomProperties = require('postcss-custom-properties');
@@ -8,6 +9,14 @@ var postcssImport = require('postcss-import');
 var postcssMixins = require('postcss-mixins');
 var postcssSimpleVars = require('postcss-simple-vars');
 var webpack = require('webpack');
+
+var getEnv = function() {
+    return process.env.NODE_ENV;
+};
+
+var isDev = function() {
+    return getEnv() === 'development';
+};
 
 module.exports = {
     entry: './src/main.js',
@@ -31,7 +40,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
+                loader: isDev() ?
+
+                    // Load styles in <head> for development (enables style injection)
+                    'style-loader!css-loader!postcss-loader' :
+
+                    // Break styles into a stylesheet for production
+                    ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
+
                 exclude: /node_modules/
             },
             {
@@ -42,6 +58,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url',
+                exclude: /node_modules/,
                 query: {
                     limit: 10000,
                     name: '[name].[ext]?[hash]'
@@ -53,10 +70,12 @@ module.exports = {
         presets: ['es2015', 'stage-0'],
         plugins: ['transform-runtime']
     },
-    postcss: function() {
-        return [
+    postcss: function(webpack) {
+
+        var plugins = [
             postcssImport({
-                path: ['./src/styles/modules'],
+                path: ['./src/styles/config'],
+                addDependencyTo: webpack
             }),
             postcssCalc,
             postcssCustomMedia,
@@ -67,17 +86,23 @@ module.exports = {
 
             // Use SASS-like variables:
             postcssSimpleVars,
-
-            autoprefixer,
-            pixrem,
         ];
+
+        // Production plugins
+        if ( ! isDev()) {
+            plugins = plugins.concat([
+                autoprefixer,
+            ]);
+        }
+
+        return plugins;
     },
     plugins: [
         new ExtractTextPlugin('styles.css')
     ]
 };
 
-if (process.env.NODE_ENV === 'production') {
+if ( ! isDev()) {
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
