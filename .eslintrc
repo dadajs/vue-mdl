@@ -1,7 +1,6 @@
 {
     "env": {
-        "node": true,
-        "es6": true
+        "node": true
     },
 
     "ecmaFeatures": {
@@ -17,10 +16,5 @@
         "restParams": true,
         "spread": true,
         "templateStrings": true
-    },
-
-    "rules": {
-        "comma-spacing": [1, {"before": false, "after": true}],
-        "no-extra-semi": 1
     }
 }

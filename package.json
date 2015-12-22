@@ -4,6 +4,10 @@
   "author": "Darin Reid <darin@elcontraption.com>",
   "contributors": [],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elcontraption/vue-webpack.git"
+  },
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --inline --hot --content-base dist/",
     "build": "NODE_ENV=production webpack --progress --hide-modules"
@@ -18,7 +22,6 @@
     "babel-runtime": "^5.8.0",
     "css-loader": "^0.23.0",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.1.1",
     "eslint-loader": "^1.1.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
@@ -39,14 +42,6 @@
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.0",
     "suitcss-base": "^1.0.1",
-    "suitcss-utils-align": "^0.2.2",
-    "suitcss-utils-display": "^1.0.0",
-    "suitcss-utils-flex": "^0.3.1",
-    "suitcss-utils-layout": "^0.4.2",
-    "suitcss-utils-offset": "^0.5.1",
-    "suitcss-utils-position": "^0.2.2",
-    "suitcss-utils-size": "^1.0.1",
-    "suitcss-utils-text": "^0.4.2",
     "template-html-loader": "0.0.3",
     "url-loader": "^0.5.7",
     "vue": "^1.0.11",
