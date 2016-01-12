@@ -1,23 +1,24 @@
-# Vue-webpack
-A component-based Vue and webpack app starter/example.
+# Vue-MDL-Starter
+A starter based [elcontraption/vue-webpack](https://github.com/elcontraption/vue-webpack), added Material Design Lite.
+
 
 - [Overview](#overview)
 - [Features](#features)
 - [Quick start](#quick-start)
-- [Workflow](#workflow)
-- [References](#references)
 
 ## Overview
-This project provides a starting point for building web apps from organized, highly [composable](https://en.wikipedia.org/wiki/Composability) components.
-
-There are [many such starters](https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=react%20webpack%20starter&oq=react%20webpack%20starter&aqs=chrome.0.0j69i60j69i57j69i60l2.2247j1j7) for webpack and React. This project is for webpack and [Vue.js](http://vuejs.org/).
-
-Use this as a starter, or as inspiration for your own setup.
+这就是一个在别人基础上加入了 MDL 的脚手架/样板文件. 拿去用,别客气.
 
 ## Features
-This is the default setup. Expand, swap, and otherwise customize as you see fit:
+我赋予了它:
 
-- VueJS:
+- Material Design Lite:
+    - [Material Design Lite](http://www.getmdl.io/)
+
+它原来的 po 主 elcontraption 赋予了它: 
+
+- Vue:
+    - [vue](http://cn.vuejs.org/)
     - [vue-router](https://github.com/vuejs/vue-router)
 - Webpack:
     - [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)
@@ -37,10 +38,10 @@ This is the default setup. Expand, swap, and otherwise customize as you see fit:
 ```sh
 
 # Clone this repo
-$ git clone git@github.com:elcontraption/vue-webpack
+$ git clone git@github.com:dadajs/vue-mdl-starter.git
 
 # Install dependencies
-$ cd vue-webpack
+$ cd vue-mdl-starter
 $ npm install
 
 # Fire up webpack-dev-server
@@ -50,37 +51,3 @@ $ npm run dev
 $ npm run build
 
 ``` 
-Customize [webpack.config.js](webpack.config.js) as you need.
-
-## Workflow
-
-### Initial setup
-By default, the app entry point is [`src/main.js`](src/main.js). Define routes in [`src/routes.js`](src/routes.js).
-
-### Organized modules
-Each module (view/component) has its own directory within [`src/views`](src/views) or [`src/components`](src/components). A module's scripts, styles, and template are all namespaced and organized within their respective directory.
-
-### Style dependencies
-Style dependencies must be resolved at the module level. First, import a stylesheet directly in your module's javascript file:
-
-```js
-import './style.css';
-
-module.exports = {
-    //...
-};
-```
-
-Declare style dependencies in the stylesheet:
-```css
-/* Import the colors config file */
-@import 'colors';
-```
-
-**Important**: because config stylesheets are imported every time they are called by a dependency, you should avoid writing any selector styles in them. Instead, declare reusable variables in config stylesheets.
-
-## References
-- [Nicholas Gallagher: Thinking beyond "Scalable CSS"](https://www.youtube.com/watch?v=L8w3v9m6G04)
-- [Simon Smith: Using webpack to build React components and their assets](http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/)
-- [VueJS: Building Larger Apps–Modularization](http://vuejs.org/guide/application.html#Modularization)
-

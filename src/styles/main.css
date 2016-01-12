@@ -1,3 +1,7 @@
+@import 'icon.css';
+@import 'material-design-lite/dist/material';
+@import 'material-design-lite/dist/material.deep_orange-blue.min.css';
+
 /**
  * Resets
  */
