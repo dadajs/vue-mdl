@@ -2,10 +2,10 @@
 
 html,
 body {
-    height: 100%;
-    background: $silver;
+    /*height: 100%;*/
+    /*background: $silver;*/
 }
 
 body {
-    display: flex;
+    /*display: flex;*/
 }

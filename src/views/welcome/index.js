@@ -1,7 +1,7 @@
 import template from './template.html';
 
 /**
- * Display the welcome view
+ * Display the first view
  */
 module.exports = {
     template,

@@ -1,18 +1,19 @@
 {
-  "name": "vue-webpack",
-  "description": "A component-based Vue and webpack starter and example.",
-  "author": "Darin Reid <darin@elcontraption.com>",
-  "contributors": [],
-  "license": "MIT",
-  "repository": {
+    "name": "vue-mdl-starter",
+    "version": "0.1.0",
+    "description": "A starter based elcontraption/vue-webpack, added Material Design Lite.",
+    "author": "Hugo Jing <hugo@guidexx.com>",
+    "contributors": ["Darin Reid <darin@elcontraption.com>"],
+    "license": "MIT",
+    "repository": {
     "type": "git",
-    "url": "https://github.com/elcontraption/vue-webpack.git"
-  },
-  "scripts": {
+    "url": "https://github.com/dadajs/vue-mdl-starter.git"
+    },
+    "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --inline --hot --content-base dist/",
     "build": "NODE_ENV=production webpack --progress --hide-modules"
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
     "autoprefixer": "^6.1.2",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.1.0",
@@ -28,6 +29,7 @@
     "html-loader": "^0.4.0",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
+    "material-design-lite": "^1.0.6",
     "node-sass": "^3.4.2",
     "normalize-css": "^2.3.1",
     "pixrem": "^3.0.0",
@@ -51,5 +53,5 @@
     "vue-router": "^0.7.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.12.0"
-  }
+    }
 }
